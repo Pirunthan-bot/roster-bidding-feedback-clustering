@@ -22,13 +22,17 @@ This project processes free-text bidding remarks from roster bidding surveys and
 ## Project Structure
 
 ```
-bidding-remarks-clustering/
-├── cluster_remarks.py          # Main clustering script
-├── visualize_clusters.py       # Visualization script
-├── data_bidding_remarks.csv    # Input data (not tracked)
-├── clustered_bidding_remarks.csv  # Output with cluster labels
-├── cluster_visualization.png   # Generated visualization
-└── README.md                   # This file
+roster-bidding-feedback-clustering/
+├── data/
+│   └── data_bidding_remarks.csv      # Input data (not tracked in git)
+├── output/
+│   ├── clustered_bidding_remarks.csv # Output with cluster labels (not tracked)
+│   └── cluster_visualization.png     # Generated visualization
+├── train_clusters.py                 # Main clustering script
+├── visualise_clusters.py             # Visualization script
+├── requirements.txt                  # Python dependencies
+├── .gitignore                        # Git ignore rules
+└── README.md                         # This file
 ```
 
 ## Requirements

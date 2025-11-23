@@ -2,8 +2,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 
+file_path = 'data/data_bidding_remarks.csv'
+output_path = 'output/clustered_bidding_remarks.csv'
+
 # Load the CSV file
-file_path = 'data_bidding_remarks.csv'
 data = pd.read_csv(file_path)
 
 # Preprocess the remarks
@@ -23,7 +25,6 @@ kmeans.fit(tfidf_matrix)
 data['Cluster'] = kmeans.labels_
 
 # Save the output to a new CSV file
-output_path = 'clustered_bidding_remarks.csv'
 data.to_csv(output_path, index=False)
 
 # Display a sample of the clustered remarks
